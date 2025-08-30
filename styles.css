@@ -1,6 +1,7 @@
 :root {
-  --color-bg: #f7f7f9;
-  --color-text: #1d1d1f;
+  --color-bg: #121212;
+  --color-surface: #1e1e1e;
+  --color-text: #f5f5f5;
   --color-accent: #6a5acd;
   --color-accent-light: #8e7bff;
 }
@@ -28,8 +29,8 @@ a {
 }
 
 .header {
-  background: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  background: var(--color-surface);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .header .container {
@@ -83,7 +84,7 @@ a {
     left: 0;
     right: 0;
     flex-direction: column;
-    background: #fff;
+    background: var(--color-surface);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
@@ -100,7 +101,7 @@ a {
 }
 
 .hero {
-  background: linear-gradient(135deg, #f0f0f3, #dcdde8);
+  background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
   text-align: center;
   padding: 8rem 0 6rem;
 }
@@ -131,7 +132,7 @@ a {
 }
 
 .features {
-  background: #fff;
+  background: var(--color-bg);
   padding: 5rem 0;
 }
 
@@ -147,13 +148,14 @@ a {
 }
 
 .feature {
-  background: var(--color-bg);
+  background: var(--color-surface);
   padding: 1.5rem;
   border-radius: 8px;
   text-align: left;
 }
 
 .how {
+  background: var(--color-bg);
   padding: 5rem 0;
   text-align: center;
 }
@@ -174,7 +176,7 @@ a {
 }
 
 .footer {
-  background: #fff;
+  background: var(--color-surface);
   text-align: center;
   padding: 2rem 0;
   font-size: 0.875rem;
