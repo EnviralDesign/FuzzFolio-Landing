@@ -6,6 +6,12 @@
   --color-accent-light: #8e7bff;
 }
 
+body.light {
+  --color-bg: #f5f5f5;
+  --color-surface: #ffffff;
+  --color-text: #1e1e1e;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -61,6 +67,21 @@ a {
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 4px;
+}
+
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--color-text);
 }
 
 .nav-toggle {
@@ -154,6 +175,35 @@ a {
   text-align: left;
 }
 
+.benefits,
+.problems {
+  background: var(--color-bg);
+  padding: 5rem 0;
+}
+
+.benefits h2,
+.problems h2 {
+  text-align: center;
+}
+
+.benefit-list,
+.problem-list {
+  margin-top: 2rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  list-style: none;
+  padding: 0;
+}
+
+.benefit-list li,
+.problem-list li {
+  background: var(--color-surface);
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
 .how {
   background: var(--color-bg);
   padding: 5rem 0;
@@ -180,4 +230,12 @@ a {
   text-align: center;
   padding: 2rem 0;
   font-size: 0.875rem;
+}
+
+.bullish {
+  color: #3fb950;
+}
+
+.bearish {
+  color: #e5534b;
 }
