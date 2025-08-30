@@ -2,22 +2,84 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>FuzzFolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to FuzzFolio</h1>
+  <header class="header">
+    <div class="container">
+      <div class="logo">FuzzFolio</div>
+      <nav class="nav" id="nav-menu">
+        <a href="#features">Features</a>
+        <a href="#how">How It Works</a>
+        <a href="#contact">Contact</a>
+        <a href="#" class="cta">Join Waitlist</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
-  <main>
-    <p>Your next favorite portfolio is coming soon.</p>
-  </main>
-  <footer>
-    <p>&copy; <span id="year"></span> FuzzFolio</p>
+
+  <section class="hero">
+    <div class="container">
+      <h1>Let the market come to you</h1>
+      <p>Build fuzzy scoring profiles and get alerted only when opportunity knocks.</p>
+      <a href="#" class="btn">Join the waitlist</a>
+    </div>
+  </section>
+
+  <section id="features" class="features">
+    <div class="container">
+      <h2>Features</h2>
+      <div class="feature-grid">
+        <div class="feature">
+          <h3>Create profiles</h3>
+          <p>Mix and match indicators into reusable fuzzy scoring profiles.</p>
+        </div>
+        <div class="feature">
+          <h3>Attach to instruments</h3>
+          <p>Apply profiles to the assets you care about most.</p>
+        </div>
+        <div class="feature">
+          <h3>Backtest & refine</h3>
+          <p>See how your ideas would have played out across history.</p>
+        </div>
+        <div class="feature">
+          <h3>Real-time alerts</h3>
+          <p>Activate profiles and get notified of fresh opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="how">
+    <div class="container">
+      <h2>How It Works</h2>
+      <ol class="steps">
+        <li>Craft a fuzzy scoring profile with your favorite indicators.</li>
+        <li>Attach it to trading instruments and backtest the results.</li>
+        <li>Set it live and let FuzzFolio watch the charts for you.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="contact" class="cta-section">
+    <div class="container">
+      <h2>Ready to trade smarter?</h2>
+      <p>Join the waitlist and be first to know when we launch.</p>
+      <a href="#" class="btn">Join the waitlist</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> FuzzFolio</p>
+    </div>
   </footer>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+
+  <script src="script.js"></script>
 </body>
 </html>
