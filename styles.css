@@ -176,13 +176,15 @@ a {
 }
 
 .benefits,
-.problems {
+.problems,
+.backtesting {
   background: var(--color-bg);
   padding: 5rem 0;
 }
 
 .benefits h2,
-.problems h2 {
+.problems h2,
+.backtesting h2 {
   text-align: center;
 }
 
