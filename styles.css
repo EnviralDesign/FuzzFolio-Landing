@@ -35,7 +35,7 @@ a {
 }
 
 .header {
-  background: var(--color-surface);
+  background: linear-gradient(90deg, var(--color-surface), #242424);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -58,15 +58,40 @@ a {
 }
 
 .nav a {
+  position: relative;
   text-decoration: none;
   font-weight: 500;
 }
 
-.nav a.cta {
+.nav a:not(.cta)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
   background: var(--color-accent);
+  transition: width 0.3s ease;
+}
+
+.nav a:not(.cta):hover::after {
+  width: 100%;
+}
+
+.nav a:not(.cta):hover {
+  color: var(--color-accent);
+}
+
+.nav a.cta {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
   color: #fff;
   padding: 0.5rem 1rem;
   border-radius: 4px;
+  transition: transform 0.2s ease;
+}
+
+.nav a.cta:hover {
+  transform: translateY(-2px);
 }
 
 
@@ -139,17 +164,18 @@ a {
 
 .btn {
   display: inline-block;
-  background: var(--color-accent);
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 600;
-  transition: opacity 0.2s;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 .btn:hover {
-  opacity: 0.9;
+  opacity: 0.95;
+  transform: translateY(-2px);
 }
 
 .features {
@@ -169,10 +195,16 @@ a {
 }
 
 .feature {
-  background: var(--color-surface);
+  background: linear-gradient(135deg, var(--color-surface), #262626);
   padding: 1.5rem;
   border-radius: 8px;
   text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .benefits,
@@ -200,10 +232,28 @@ a {
 
 .benefit-list li,
 .problem-list li {
-  background: var(--color-surface);
+  background: linear-gradient(135deg, var(--color-surface), #262626);
   padding: 1rem 1.25rem;
   border-radius: 8px;
   margin-bottom: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-list li:hover,
+.problem-list li:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.in-view {
+  opacity: 1;
+  transform: none;
 }
 
 .how {
