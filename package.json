@@ -1,0 +1,19 @@
+{
+  "name": "fuzzfolio-landing",
+  "version": "1.0.0",
+  "description": "Static landing page for the FuzzFolio SaaS MVP. The page is built with plain HTML, CSS and a bit of JavaScript. It includes a light/dark theme toggle and responsive sections highlighting the product's features.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.12",
+    "tailwindcss": "^4.1.12",
+    "vite": "^7.1.3"
+  }
+}

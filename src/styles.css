@@ -1,3 +1,5 @@
+@import "tailwindcss";
+/* put your existing styles below so they can override utilities if needed */
 :root {
   --color-bg: #121212;
   --color-surface: #1e1e1e;
@@ -411,3 +413,5 @@ a {
 .bearish {
   color: #e5534b;
 }
+@layer utilities {}
+
