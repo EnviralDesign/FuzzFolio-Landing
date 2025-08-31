@@ -37,8 +37,13 @@ a {
 }
 
 .header {
-  background: linear-gradient(90deg, var(--color-surface), #242424);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: radial-gradient(circle at 40px 50%, rgba(106, 90, 205, 0.35), transparent 70%),
+    linear-gradient(135deg, #1e1e1e, #2a2a2a);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
 }
 
 .header .container {
@@ -101,6 +106,16 @@ a {
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: transform 0.2s ease;
+}
+
+.nav a.active {
+  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav a.active::after {
+  width: 100%;
 }
 
 .nav a.cta:hover {
@@ -209,8 +224,12 @@ a {
   background: var(--color-surface);
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
+  --rotate: 0deg;
+  --tx: 0px;
+  --ty: 0px;
+  transform: rotate(var(--rotate)) translate(var(--tx), var(--ty));
 }
 
 .signal-card h4 {
@@ -230,24 +249,31 @@ a {
   margin: 0;
 }
 
+
 .card1 {
-  transform: rotate(-15deg) translate(-60px, 20px);
+  --rotate: -10deg;
+  --tx: -80px;
+  --ty: 20px;
 }
 
 .card2 {
-  transform: rotate(5deg) translate(0, 0);
+  --rotate: 0deg;
+  --tx: 0px;
+  --ty: 0px;
 }
 
 .card3 {
-  transform: rotate(15deg) translate(60px, 20px);
+  --rotate: 10deg;
+  --tx: 80px;
+  --ty: 20px;
 }
 
+
 .signal-card:hover,
-.signal-card:focus,
-.signal-card.active {
-  transform: scale(1.1) translate(0, -20px) rotate(0deg);
+.signal-card:focus {
+  transform: rotate(var(--rotate)) translate(var(--tx), calc(var(--ty) - 5px));
   z-index: 10;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
   outline: none;
 }
 
