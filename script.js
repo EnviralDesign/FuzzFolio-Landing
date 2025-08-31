@@ -26,3 +26,12 @@ const observer = new IntersectionObserver(
 );
 
 document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Interactive hero cards
+const cards = document.querySelectorAll('.signal-card');
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    cards.forEach(c => c.classList.remove('active'));
+    card.classList.add('active');
+  });
+});
