@@ -178,6 +178,23 @@ a {
   transform: translateY(-2px);
 }
 
+.btn.secondary {
+  background: transparent;
+  border: 2px solid var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn.secondary:hover {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.disclaimer {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.4;
+}
+
 .features {
   background: var(--color-bg);
   padding: 5rem 0;
