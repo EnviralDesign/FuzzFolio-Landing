@@ -2,7 +2,7 @@ export default function Testimonials() {
   const section = document.createElement('section');
   section.className = 'section';
   section.innerHTML = `
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-7xl mx-auto container-pad">
       <h2 class="section-title">Traders say</h2>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="card">

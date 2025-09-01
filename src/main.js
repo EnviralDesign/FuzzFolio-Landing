@@ -27,10 +27,9 @@ const app = document.getElementById('app');
   Footer
 ].forEach(Component => app.appendChild(Component()));
 
-const navToggle = document.getElementById('mobile-toggle');
-const navMenu = document.getElementById('nav-menu');
-if (navToggle && navMenu) {
-  navToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('hidden');
-  });
-}
+const btn = document.getElementById('menu-toggle');
+const menu = document.getElementById('mobile-menu');
+btn?.addEventListener('click', () => {
+  const open = menu.classList.toggle('hidden');
+  btn.setAttribute('aria-expanded', String(!open));
+});

@@ -3,7 +3,7 @@ export default function PricingPlans() {
   section.id = 'plans';
   section.className = 'section bg-slate-900';
   section.innerHTML = `
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-7xl mx-auto container-pad">
       <h2 class="section-title">Plans</h2>
       <div class="grid md:grid-cols-2 gap-8">
         <div class="card text-center">

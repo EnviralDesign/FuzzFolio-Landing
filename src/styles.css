@@ -3,11 +3,28 @@
 @layer utilities {
   /* Gradient tokens for hero + accents */
   .bg-hero-gradient {
-    /* multiple layers: soft vignette + directional glow */
     background-image:
-      radial-gradient(60% 80% at 10% 0%, rgba(168,85,247,0.30), transparent 60%),
-      radial-gradient(40% 40% at 85% 35%, rgba(236,72,153,0.25), transparent 60%),
-      linear-gradient(180deg, rgba(2,6,23,1) 0%, rgba(2,6,23,0.85) 100%);
+      radial-gradient(140% 120% at 0% 0%, rgba(168,85,247,.35), transparent 60%),
+      radial-gradient(140% 120% at 100% 0%, rgba(236,72,153,.30), transparent 55%),
+      linear-gradient(180deg, #0b1220 0%, #0b1220 100%);
+  }
+
+  /* Better mobile-safe section gutters */
+  .container-pad { @apply px-4 sm:px-6; }
+
+  /* Edge-fade masks for scroll areas (if we keep horizontal scroll anywhere) */
+  .edge-fade {
+    --fade: linear-gradient(90deg, rgba(2,6,23,1) 0%, rgba(2,6,23,0) 12%, rgba(2,6,23,0) 88%, rgba(2,6,23,1) 100%);
+    -webkit-mask-image: var(--fade);
+            mask-image: var(--fade);
+  }
+
+  /* Nicer CTA gradient (remove teal cast) */
+  .bg-cta-gradient {
+    background-image:
+      radial-gradient(140% 120% at 0% 0%, rgba(168,85,247,.40), transparent 60%),
+      radial-gradient(140% 120% at 100% 0%, rgba(236,72,153,.35), transparent 55%),
+      linear-gradient(180deg, #0b1220 0%, #0b1220 100%);
   }
 
   /* Informative skeleton */
@@ -32,10 +49,10 @@
 
 @layer components {
   .btn-primary {
-    @apply px-4 py-2 rounded-md bg-purple-600 text-white font-semibold shadow hover:shadow-lg transition;
+    @apply px-4 py-2 rounded-lg bg-purple-600 text-white font-semibold shadow hover:shadow-lg transition focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40;
   }
   .btn-secondary {
-    @apply px-4 py-2 rounded-md border border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition;
+    @apply px-4 py-2 rounded-lg border border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40;
   }
   .section {
     @apply py-20;
@@ -44,6 +61,6 @@
     @apply text-3xl font-bold text-center mb-8;
   }
   .card {
-    @apply bg-white/10 backdrop-blur rounded-lg p-6 shadow;
+    @apply bg-white/10 backdrop-blur rounded-2xl p-6 shadow;
   }
 }

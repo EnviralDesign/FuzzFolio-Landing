@@ -3,7 +3,7 @@ export default function HowItWorks() {
   section.id = 'how';
   section.className = 'section';
   section.innerHTML = `
-    <div class="max-w-7xl mx-auto px-4">
+    <div class="max-w-7xl mx-auto container-pad">
       <h2 class="section-title">How it works</h2>
       <div class="relative grid md:grid-cols-3 gap-8 md:before:content-[''] md:before:absolute md:before:top-6 md:before:left-[10%] md:before:right-[10%] md:before:h-px md:before:bg-white/10">
         <div class="card text-center relative z-10">
