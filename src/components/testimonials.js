@@ -8,22 +8,31 @@ export default function Testimonials() {
         <div class="card">
           <p class="mb-4">"FuzzFolio helped me spot setups I used to miss."</p>
           <div class="flex items-center gap-2">
-            <div class="w-10 h-10 bg-gray-700 rounded-full"></div>
-            <span>Alex</span>
+            <div class="w-10 h-10 skeleton rounded-full grid place-items-center" role="img" aria-label="Avatar placeholder"><span class="text-xs text-white/80">A</span></div>
+            <div>
+              <span>Alex</span>
+              <p class="text-xs text-gray-400">Swing Trader</p>
+            </div>
           </div>
         </div>
         <div class="card">
           <p class="mb-4">"The scoring system keeps my trades disciplined."</p>
           <div class="flex items-center gap-2">
-            <div class="w-10 h-10 bg-gray-700 rounded-full"></div>
-            <span>Jordan</span>
+            <div class="w-10 h-10 skeleton rounded-full grid place-items-center" role="img" aria-label="Avatar placeholder"><span class="text-xs text-white/80">J</span></div>
+            <div>
+              <span>Jordan</span>
+              <p class="text-xs text-gray-400">Day Trader</p>
+            </div>
           </div>
         </div>
         <div class="card">
           <p class="mb-4">"Backtesting is fast and easy to tweak."</p>
           <div class="flex items-center gap-2">
-            <div class="w-10 h-10 bg-gray-700 rounded-full"></div>
-            <span>Taylor</span>
+            <div class="w-10 h-10 skeleton rounded-full grid place-items-center" role="img" aria-label="Avatar placeholder"><span class="text-xs text-white/80">T</span></div>
+            <div>
+              <span>Taylor</span>
+              <p class="text-xs text-gray-400">Scalper</p>
+            </div>
           </div>
         </div>
       </div>

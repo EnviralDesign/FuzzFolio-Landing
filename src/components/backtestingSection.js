@@ -13,7 +13,10 @@ export default function BacktestingSection() {
           <li>Traceable outcomes with price context</li>
         </ul>
       </div>
-      <div class="aspect-video bg-gray-700 rounded"></div>
+      <div>
+        <div class="aspect-[16/9] skeleton" role="img" aria-label="Backtest chart mockup"><span class="skeleton-label">16:9</span></div>
+        <p class="mt-2 text-xs text-gray-400">Backtest chart mockup (16:9)</p>
+      </div>
     </div>
   `;
   return section;

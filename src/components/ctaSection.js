@@ -8,6 +8,7 @@ export default function CTASection() {
       <a href="#" class="btn-primary">Join Free Setup Radar</a>
       <a href="#" class="btn-secondary">Become an Early Access Member</a>
     </div>
+    <p class="mt-4 text-sm text-white/80">No credit card required.</p>
   `;
   return section;
 }
