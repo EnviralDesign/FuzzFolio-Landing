@@ -8,18 +8,26 @@
 </head>
 <body class="font-[Inter] bg-slate-950 text-white">
   <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur">
-    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4 relative">
+    <nav class="max-w-7xl mx-auto container-pad py-4 flex items-center justify-between">
       <div class="font-bold text-xl">FuzzFolio</div>
-      <button id="mobile-toggle" class="md:hidden" aria-label="Toggle navigation">
-        <span class="text-2xl">☰</span>
-      </button>
-      <div id="nav-menu" class="hidden flex-col gap-4 absolute top-full left-0 w-full bg-slate-900/90 p-4 md:static md:flex md:flex-row md:gap-6 md:w-auto md:bg-transparent md:p-0 items-center">
-        <a href="#features" class="hover:text-purple-400">Features</a>
-        <a href="#plans" class="hover:text-purple-400">Plans</a>
-        <a href="#faq" class="hover:text-purple-400">FAQ</a>
+      <button id="menu-toggle" class="md:hidden p-2 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40" aria-expanded="false" aria-controls="mobile-menu">☰</button>
+      <div class="hidden md:flex gap-6 items-center">
+        <a href="#features" class="hover:text-purple-400 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Features</a>
+        <a href="#plans" class="hover:text-purple-400 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Plans</a>
+        <a href="#faq" class="hover:text-purple-400 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">FAQ</a>
         <a href="#cta" class="btn-primary text-sm">Join Free Setup Radar</a>
       </div>
     </nav>
+    <div id="mobile-menu" class="fixed inset-x-0 top-14 z-50 hidden">
+      <div class="mx-3 rounded-xl bg-slate-900/95 backdrop-blur border border-white/10 shadow-lg">
+        <a href="#features" class="block px-4 py-3 border-b border-white/10 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Features</a>
+        <a href="#plans" class="block px-4 py-3 border-b border-white/10 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Plans</a>
+        <a href="#faq" class="block px-4 py-3 border-b border-white/10 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">FAQ</a>
+        <a href="#" class="block px-4 py-3 text-center focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">
+          <span class="btn-primary inline-block w-full">Join Free Setup Radar</span>
+        </a>
+      </div>
+    </div>
   </header>
   <main id="app"></main>
   <script type="module" src="/src/main.js"></script>

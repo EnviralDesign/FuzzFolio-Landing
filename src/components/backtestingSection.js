@@ -3,7 +3,7 @@ export default function BacktestingSection() {
   section.id = 'backtesting';
   section.className = 'section bg-slate-900';
   section.innerHTML = `
-    <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-8 items-center">
+    <div class="max-w-7xl mx-auto container-pad grid md:grid-cols-2 gap-8 items-center">
       <div>
         <h2 class="section-title text-left md:text-left">Backtesting built in</h2>
         <p class="mb-4">Validate a scoring profile with the same engine that powers live alerts.</p>
