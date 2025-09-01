@@ -15,7 +15,8 @@ export default function PricingPlans() {
           </ul>
           <a href="#" class="btn-primary">Join Free</a>
         </div>
-        <div class="card text-center">
+        <div class="card text-center relative">
+          <span class="absolute -top-3 right-4 text-xs bg-purple-600 text-white px-2 py-1 rounded">Best for active traders</span>
           <h3 class="text-xl font-semibold mb-4">Early Access Member — Full Feed</h3>
           <ul class="space-y-2 mb-4">
             <li>Real-time scoring alerts with context</li>

@@ -8,10 +8,10 @@ export default function StatisticBanner() {
         <p class="text-sm text-gray-300">Traders trust FuzzFolio</p>
       </div>
       <div class="flex gap-6 overflow-x-auto">
-        <div class="w-24 h-12 bg-gray-700 rounded"></div>
-        <div class="w-24 h-12 bg-gray-700 rounded"></div>
-        <div class="w-24 h-12 bg-gray-700 rounded"></div>
-        <div class="w-24 h-12 bg-gray-700 rounded"></div>
+        <div class="w-28 aspect-[3/1] skeleton" role="img" aria-label="Partner logo placeholder"><span class="skeleton-label">3:1 logo</span></div>
+        <div class="w-28 aspect-[3/1] skeleton" role="img" aria-label="Partner logo placeholder"><span class="skeleton-label">3:1 logo</span></div>
+        <div class="w-28 aspect-[3/1] skeleton" role="img" aria-label="Partner logo placeholder"><span class="skeleton-label">3:1 logo</span></div>
+        <div class="w-28 aspect-[3/1] skeleton" role="img" aria-label="Partner logo placeholder"><span class="skeleton-label">3:1 logo</span></div>
       </div>
     </div>
   `;

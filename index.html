@@ -8,9 +8,12 @@
 </head>
 <body class="font-[Inter] bg-slate-950 text-white">
   <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur">
-    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4">
+    <nav class="max-w-7xl mx-auto flex items-center justify-between p-4 relative">
       <div class="font-bold text-xl">FuzzFolio</div>
-      <div class="hidden md:flex gap-6 items-center" id="nav-menu">
+      <button id="mobile-toggle" class="md:hidden" aria-label="Toggle navigation">
+        <span class="text-2xl">☰</span>
+      </button>
+      <div id="nav-menu" class="hidden flex-col gap-4 absolute top-full left-0 w-full bg-slate-900/90 p-4 md:static md:flex md:flex-row md:gap-6 md:w-auto md:bg-transparent md:p-0 items-center">
         <a href="#features" class="hover:text-purple-400">Features</a>
         <a href="#plans" class="hover:text-purple-400">Plans</a>
         <a href="#faq" class="hover:text-purple-400">FAQ</a>
