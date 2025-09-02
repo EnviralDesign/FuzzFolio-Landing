@@ -3,11 +3,13 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
   const wrap = document.createElement('div');
   wrap.className = 'market-grid grid grid-cols-2 gap-4 md:gap-5';
 
+  const noise = 0.3 * 0.75; // reduce stochastic variance by 25%
+
   // --- State per tile
   const tiles = symbols.map(sym => {
     const data = Array.from(
       { length: points },
-      (_, i) => clamp11(0.5 * Math.sin(i / 6) + randn(0, 0.3))
+      (_, i) => clamp11(0.5 * Math.sin(i / 6) + randn(0, noise))
     );
     return { sym, data, el: null, up: 0, down: 0 };
   });
@@ -33,7 +35,7 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
     // Update data + scores for each tile
     tiles.forEach(t => {
       const last = t.data[t.data.length - 1];
-      const next = clamp11(last + randn(0, 0.3));
+      const next = clamp11(last + randn(0, noise));
       t.data.push(next); t.data.shift();
 
       // Derive long/short scores from shared value
