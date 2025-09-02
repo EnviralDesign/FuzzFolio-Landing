@@ -78,16 +78,18 @@
                       radial-gradient(circle at 0% 100%, rgba(168,85,247,0.15), transparent 70%),
                       linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   }
-  .border-gradient { position: relative; }
+  .border-gradient { position: relative; z-index: 0; }
   .border-gradient::before {
     content: '';
-    position: absolute; inset: -1px;
+    position: absolute;
+    inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(130deg, #a855f7, #ec4899);
+    background: linear-gradient(130deg, rgba(168,85,247,0.5), rgba(236,72,153,0.5));
     -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
             mask-composite: exclude;
+    pointer-events: none;
   }
   .corner-glow::after {
     content: '';
@@ -124,17 +126,14 @@
 
   /* Animations */
   @keyframes gradient-border {
-    0%   { border-image-source: linear-gradient(130deg, #a855f7, #ec4899); }
-    50%  { border-image-source: linear-gradient(130deg, #ec4899, #f97316); }
-    100% { border-image-source: linear-gradient(130deg, #a855f7, #ec4899); }
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
-  .cta-animated {
-    display: inline-block;
-    border: 2px solid transparent;
-    border-radius: inherit;
-    background-clip: padding-box;
-    animation: gradient-border 4s infinite;
-    border-image-slice: 1;
+  .cta-animated { position: relative; z-index: 0; }
+  .cta-animated::before {
+    animation: gradient-border 4s linear infinite;
+    background-size: 300% 300%;
   }
   @keyframes fade-up {
     from { opacity: 0; transform: translateY(20px); }
@@ -166,6 +165,14 @@
     box-shadow: 0 0 0 4px rgba(236,72,153,0.4);
   }
   .cta-pill { @apply px-4 py-2 rounded-full font-semibold; }
+
+  /* Horizontal ticker for logos */
+  .logo-ticker { animation: logo-scroll 30s linear infinite; }
+  .logo-ticker:hover { animation-play-state: paused; }
+  @keyframes logo-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
 }
 
 @layer components {
