@@ -12,7 +12,7 @@ export default function FAQAccordion() {
             <span>Is this financial advice?</span>
             <span class="faq-icon text-xl">+</span>
           </button>
-          <div id="faq1" class="px-4 pb-4 hidden faq-answer text-base sm:text-lg leading-relaxed text-white/80" aria-hidden="true">
+          <div id="faq1" class="faq-answer px-4 pb-4 text-base sm:text-lg leading-relaxed text-white/80 max-h-0 overflow-hidden transition-[max-height] duration-300" aria-hidden="true">
             No. FuzzFolio provides educational analysis...
           </div>
         </div>
@@ -21,7 +21,7 @@ export default function FAQAccordion() {
             <span>Can I cancel anytime?</span>
             <span class="faq-icon text-xl">+</span>
           </button>
-          <div id="faq2" class="px-4 pb-4 hidden faq-answer text-base sm:text-lg leading-relaxed text-white/80" aria-hidden="true">
+          <div id="faq2" class="faq-answer px-4 pb-4 text-base sm:text-lg leading-relaxed text-white/80 max-h-0 overflow-hidden transition-[max-height] duration-300" aria-hidden="true">
             Yes, memberships can be cancelled anytime.
           </div>
         </div>
@@ -38,13 +38,13 @@ export default function FAQAccordion() {
       const a = section.querySelector(`#${q.getAttribute('aria-controls')}`);
       q.setAttribute('aria-expanded', 'false');
       q.querySelector('.faq-icon').textContent = '+';
-      a.classList.add('hidden');
+      a.style.maxHeight = '0px';
       a.setAttribute('aria-hidden', 'true');
     });
     if (!expanded) {
       btn.setAttribute('aria-expanded', 'true');
       btn.querySelector('.faq-icon').textContent = '–';
-      answer.classList.remove('hidden');
+      answer.style.maxHeight = `${answer.scrollHeight}px`;
       answer.setAttribute('aria-hidden', 'false');
     }
   });
