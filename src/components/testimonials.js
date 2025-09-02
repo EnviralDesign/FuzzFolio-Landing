@@ -3,9 +3,10 @@ export default function Testimonials() {
   section.className = 'section';
   section.innerHTML = `
     <div class="max-w-7xl mx-auto container-pad">
-      <h2 class="section-title">Traders say</h2>
-      <div class="grid md:grid-cols-3 gap-8">
-        <div class="card">
+      <span class="kicker">Testimonials</span>
+      <h2 class="section-title mt-2">Traders say</h2>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="frame frame-ghost p-6">
           <p class="mb-4">"FuzzFolio helped me spot setups I used to miss."</p>
           <div class="flex items-center gap-2">
             <div class="w-10 h-10 skeleton rounded-full grid place-items-center" role="img" aria-label="Avatar placeholder"><span class="text-xs text-white/80">A</span></div>
@@ -15,7 +16,7 @@ export default function Testimonials() {
             </div>
           </div>
         </div>
-        <div class="card">
+        <div class="frame frame-ghost p-6">
           <p class="mb-4">"The scoring system keeps my trades disciplined."</p>
           <div class="flex items-center gap-2">
             <div class="w-10 h-10 skeleton rounded-full grid place-items-center" role="img" aria-label="Avatar placeholder"><span class="text-xs text-white/80">J</span></div>
@@ -25,7 +26,7 @@ export default function Testimonials() {
             </div>
           </div>
         </div>
-        <div class="card">
+        <div class="frame frame-ghost p-6">
           <p class="mb-4">"Backtesting is fast and easy to tweak."</p>
           <div class="flex items-center gap-2">
             <div class="w-10 h-10 skeleton rounded-full grid place-items-center" role="img" aria-label="Avatar placeholder"><span class="text-xs text-white/80">T</span></div>

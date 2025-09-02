@@ -1,15 +1,19 @@
 export default function CTASection() {
   const section = document.createElement('section');
   section.id = 'cta';
-  section.className = 'section bg-cta-gradient text-center';
+  section.className = 'section';
   section.innerHTML = `
-    <div class="max-w-3xl mx-auto container-pad">
-      <h2 class="text-3xl font-bold mb-6">Ready to see clean setups?</h2>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="#" class="btn-primary">Join Free Setup Radar</a>
-        <a href="#" class="btn-secondary">Become an Early Access Member</a>
+    <div class="max-w-4xl mx-auto container-pad">
+      <div class="frame p-8 text-center" style="background-image:
+        radial-gradient(120% 90% at 0% 0%, rgba(168,85,247,.25), transparent 60%),
+        radial-gradient(120% 90% at 100% 0%, rgba(236,72,153,.20), transparent 55%);">
+        <h2 class="text-3xl font-bold">Ready to see clean setups?</h2>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="#" class="cta-primary cta-pill">Get Setups</a>
+          <a href="#" class="cta-secondary cta-pill">Join on Telegram</a>
+        </div>
+        <p class="mt-3 text-white/80 text-sm">No card. Free preview.</p>
       </div>
-      <p class="mt-4 text-white/80 text-sm">No credit card required.</p>
     </div>
   `;
   return section;

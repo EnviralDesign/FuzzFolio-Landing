@@ -45,6 +45,41 @@
     @apply absolute bottom-2 right-2 text-[11px] tracking-wide uppercase bg-black/50
            text-white/80 px-2 py-0.5 rounded;
   }
+
+  /* App canvas */
+  .app-bg { background-color: #0b1220; }
+
+  /* Title kicker (small label above section titles) */
+  .kicker {
+    @apply inline-flex items-center gap-2 text-[11px] tracking-wider uppercase
+           px-2 py-0.5 rounded-full bg-white/5 text-white/70 border border-white/10;
+  }
+
+  /* Region frames (cards large enough to feel like “sections”) */
+  .frame {
+    @apply rounded-3xl border border-white/10 bg-white/[0.03] shadow;
+  }
+  .frame-ghost {
+    @apply rounded-3xl border border-white/5 bg-white/[0.02];
+  }
+  .frame-glow {
+    box-shadow: inset 0 0 0 1px rgba(255,255,255,.05), 0 20px 60px rgba(0,0,0,.45);
+  }
+
+  /* Gradient strokes for headings, subtle */
+  .heading-gradient {
+    background: linear-gradient(180deg, #fff, #cbd5e1 70%);
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+
+  /* CTA tokens */
+  .cta-primary {
+    @apply px-4 py-2 rounded-lg bg-purple-600 text-white font-semibold shadow hover:shadow-lg transition focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40;
+  }
+  .cta-secondary {
+    @apply px-4 py-2 rounded-lg border border-purple-600 text-purple-600 font-semibold hover:bg-purple-600 hover:text-white transition focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40;
+  }
+  .cta-pill { @apply px-4 py-2 rounded-full font-semibold; }
 }
 
 @layer components {
