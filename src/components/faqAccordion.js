@@ -5,20 +5,24 @@ export default function FAQAccordion() {
   section.innerHTML = `
     <div class="max-w-7xl mx-auto container-pad">
       <h2 class="section-title">FAQ</h2>
-      <div class="space-y-4">
-        <div class="border border-gray-700 rounded">
+      <div class="space-y-4 max-w-3xl mx-auto">
+        <div class="frame frame-ghost overflow-hidden">
           <button class="w-full text-left px-4 py-3 flex justify-between items-center faq-question focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40" aria-expanded="false" aria-controls="faq1">
             <span>Is this financial advice?</span>
             <span class="faq-icon text-xl">+</span>
           </button>
-          <div id="faq1" class="px-4 pb-4 hidden faq-answer" aria-hidden="true">No. FuzzFolio provides educational analysis...</div>
+          <div id="faq1" class="px-4 pb-4 hidden faq-answer" aria-hidden="true">
+            No. FuzzFolio provides educational analysis...
+          </div>
         </div>
-        <div class="border border-gray-700 rounded">
+        <div class="frame frame-ghost overflow-hidden">
           <button class="w-full text-left px-4 py-3 flex justify-between items-center faq-question focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40" aria-expanded="false" aria-controls="faq2">
             <span>Can I cancel anytime?</span>
             <span class="faq-icon text-xl">+</span>
           </button>
-          <div id="faq2" class="px-4 pb-4 hidden faq-answer" aria-hidden="true">Yes, memberships can be cancelled anytime.</div>
+          <div id="faq2" class="px-4 pb-4 hidden faq-answer" aria-hidden="true">
+            Yes, memberships can be cancelled anytime.
+          </div>
         </div>
       </div>
     </div>
