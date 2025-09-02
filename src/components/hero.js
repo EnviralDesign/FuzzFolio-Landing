@@ -5,7 +5,7 @@ export default function HeroSection() {
     <div class="max-w-7xl mx-auto container-pad grid lg:grid-cols-2 gap-10 items-center">
       <div>
         <span class="kicker">FuzzFolio</span>
-        <h1 class="mt-3 text-6xl md:text-7xl font-extrabold leading-tight">
+        <h1 class="mt-3 text-5xl sm:text-6xl md:text-7xl font-extrabold leading-tight">
           <span class="heading-gradient">See clean setups.</span><br/>Trade on <span class="heading-gradient">your terms</span>.
         </h1>
         <p class="mt-4 max-w-md text-base sm:text-lg leading-relaxed text-white/80">FuzzFolio helps you identify optimal trading setups...</p>
