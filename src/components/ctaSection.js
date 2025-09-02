@@ -9,13 +9,13 @@ export default function CTASection() {
         radial-gradient(120% 90% at 100% 0%, rgba(236,72,153,.20), transparent 55%),
         linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));">
         <span class="kicker">Join</span>
-        <h2 class="text-3xl sm:text-4xl font-bold mt-2">Ready to see <span class="heading-gradient">clean setups</span>?</h2>
+        <h2 class="text-4xl md:text-5xl font-bold mt-2">Ready to see <span class="heading-gradient">clean setups</span>?</h2>
         <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
           <a href="#" class="cta-primary cta-pill border-gradient cta-animated">Get setups</a>
           <a href="#" class="cta-secondary cta-pill border-gradient cta-animated">Join on Telegram</a>
         </div>
-        <p class="mt-3 text-sm text-white/70">No credit card required</p>
-        <p class="mt-1 text-xs text-white/70">Updates via Telegram, no spam</p>
+        <p class="mt-3 text-sm text-white/70 max-w-sm mx-auto">No credit card required</p>
+        <p class="mt-1 text-sm text-white/70 max-w-sm mx-auto">Updates via Telegram, no spam</p>
       </div>
     </div>
   `;

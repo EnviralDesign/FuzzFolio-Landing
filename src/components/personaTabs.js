@@ -14,23 +14,23 @@ export default function PersonaTabs() {
       </div>
       <div class="persona-content max-w-3xl mx-auto">
         <div id="panel-day" data-tab="day" class="tab-panel" role="tabpanel" aria-labelledby="tab-day">
-          <p class="mb-4">Day traders can react to real-time scoring alerts and quick backtests.</p>
+          <p class="mb-4 text-base sm:text-lg leading-relaxed text-white/80">Day traders can react to real-time scoring alerts and quick backtests.</p>
           <div class="aspect-[16/9] skeleton" role="img" aria-label="Day trader dashboard preview"><span class="skeleton-label">16:9 preview</span></div>
         </div>
         <div id="panel-swing" data-tab="swing" class="tab-panel" role="tabpanel" aria-labelledby="tab-swing">
-          <p class="mb-4">Swing traders can hold positions with confidence using clear setup scores.</p>
+          <p class="mb-4 text-base sm:text-lg leading-relaxed text-white/80">Swing traders can hold positions with confidence using clear setup scores.</p>
           <div class="aspect-[16/9] skeleton" role="img" aria-label="Swing trader dashboard preview"><span class="skeleton-label">16:9 preview</span></div>
         </div>
         <div id="panel-scalper" data-tab="scalper" class="tab-panel" role="tabpanel" aria-labelledby="tab-scalper">
-          <p class="mb-4">Scalpers get fast signals to catch quick moves.</p>
+          <p class="mb-4 text-base sm:text-lg leading-relaxed text-white/80">Scalpers get fast signals to catch quick moves.</p>
           <div class="aspect-[16/9] skeleton" role="img" aria-label="Scalper dashboard preview"><span class="skeleton-label">16:9 preview</span></div>
         </div>
         <div id="panel-new" data-tab="new" class="tab-panel" role="tabpanel" aria-labelledby="tab-new">
-          <p class="mb-4">New traders learn by seeing clean setups scored in real time.</p>
+          <p class="mb-4 text-base sm:text-lg leading-relaxed text-white/80">New traders learn by seeing clean setups scored in real time.</p>
           <div class="aspect-[16/9] skeleton" role="img" aria-label="New trader dashboard preview"><span class="skeleton-label">16:9 preview</span></div>
         </div>
         <div id="panel-you" data-tab="you" class="tab-panel" role="tabpanel" aria-labelledby="tab-you">
-          <p class="mb-4">Whatever your style, FuzzFolio adapts to you.</p>
+          <p class="mb-4 text-base sm:text-lg leading-relaxed text-white/80">Whatever your style, FuzzFolio adapts to you.</p>
           <div class="aspect-[16/9] skeleton" role="img" aria-label="Personalized dashboard preview"><span class="skeleton-label">16:9 preview</span></div>
         </div>
       </div>
