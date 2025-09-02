@@ -22,5 +22,7 @@ export default function StatisticBanner() {
       </div>
     </div>
   `;
+  const ticker = section.querySelector('.logo-ticker');
+  ticker.innerHTML += ticker.innerHTML;
   return section;
 }
