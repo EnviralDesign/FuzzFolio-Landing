@@ -25,7 +25,20 @@ const app = document.getElementById('app');
 
 const btn = document.getElementById('menu-toggle');
 const menu = document.getElementById('mobile-menu');
-btn?.addEventListener('click', () => {
-  const open = menu.classList.toggle('hidden');
-  btn.setAttribute('aria-expanded', String(!open));
-});
+const closeBtn = document.getElementById('menu-close');
+
+function openMenu() {
+  menu.classList.remove('hidden');
+  btn.setAttribute('aria-expanded', 'true');
+  document.body.classList.add('overflow-hidden');
+}
+
+function closeMenu() {
+  menu.classList.add('hidden');
+  btn.setAttribute('aria-expanded', 'false');
+  document.body.classList.remove('overflow-hidden');
+}
+
+btn?.addEventListener('click', openMenu);
+closeBtn?.addEventListener('click', closeMenu);
+menu?.querySelectorAll('a')?.forEach(link => link.addEventListener('click', closeMenu));
