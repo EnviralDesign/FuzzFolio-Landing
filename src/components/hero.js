@@ -5,15 +5,15 @@ export default function HeroSection() {
     <div class="max-w-7xl mx-auto container-pad grid lg:grid-cols-2 gap-10 items-center">
       <div>
         <span class="kicker">FuzzFolio</span>
-        <h1 class="mt-3 text-5xl md:text-7xl font-bold leading-tight">
-          <span class="heading-gradient">See clean setups.</span><br/>Trade on your terms.
+        <h1 class="mt-3 text-6xl md:text-7xl font-extrabold leading-tight">
+          <span class="heading-gradient">See clean setups.</span><br/>Trade on <span class="heading-gradient">your terms</span>.
         </h1>
         <p class="mt-4 max-w-md text-base sm:text-lg leading-relaxed text-white/80">FuzzFolio helps you identify optimal trading setups...</p>
         <div class="mt-8 flex gap-3">
           <a href="#" class="cta-primary cta-pill border-gradient cta-animated">Get setups</a>
           <a href="#" class="cta-secondary cta-pill">Join on Telegram</a>
         </div>
-        <p class="mt-2 text-xs text-white/70">Updates via Telegram, no spam</p>
+        <p class="mt-2 text-sm text-white/70 text-center max-w-xs mx-auto">Updates via Telegram, no spam</p>
       </div>
       <div>
         <div class="grid grid-cols-3 gap-3">

@@ -8,8 +8,8 @@ export default function BacktestingSection() {
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <span class="kicker">Backtesting</span>
-            <h2 class="text-3xl sm:text-4xl font-bold mt-2"><span class="heading-gradient">Backtesting</span> built in</h2>
-            <ul class="list-disc ml-5 mt-4 space-y-2 text-base sm:text-lg leading-relaxed text-white/80">
+            <h2 class="text-4xl md:text-5xl font-bold mt-2 mb-4"><span class="heading-gradient">Backtesting</span> built in</h2>
+            <ul class="list-disc ml-5 space-y-2 text-base sm:text-lg leading-relaxed text-white/80">
               <li>Configurable lookbacks</li>
               <li>Fast iteration on weights</li>
               <li>Traceable outcomes with price context</li>
