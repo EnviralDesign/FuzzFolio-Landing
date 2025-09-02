@@ -29,13 +29,24 @@ export default function FAQAccordion() {
     </div>
   `;
 
-  section.querySelectorAll('.faq-question').forEach(btn => {
+  const questions = section.querySelectorAll('.faq-question');
+  questions.forEach(btn => {
     btn.addEventListener('click', () => {
-      const answer = btn.nextElementSibling;
-      const open = answer.classList.toggle('hidden') === false;
-      btn.querySelector('.faq-icon')?.replaceChildren(document.createTextNode(open ? '–' : '+'));
-      btn.setAttribute('aria-expanded', String(open));
-      answer.setAttribute('aria-hidden', String(!open));
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      questions.forEach(q => {
+        const ans = section.querySelector(`#${q.getAttribute('aria-controls')}`);
+        q.setAttribute('aria-expanded', 'false');
+        q.querySelector('.faq-icon').textContent = '+';
+        ans.classList.add('hidden');
+        ans.setAttribute('aria-hidden', 'true');
+      });
+      if (!expanded) {
+        const answer = section.querySelector(`#${btn.getAttribute('aria-controls')}`);
+        btn.setAttribute('aria-expanded', 'true');
+        btn.querySelector('.faq-icon').textContent = '–';
+        answer.classList.remove('hidden');
+        answer.setAttribute('aria-hidden', 'false');
+      }
     });
   });
 

@@ -129,8 +129,9 @@
     100% { border-image-source: linear-gradient(130deg, #a855f7, #ec4899); }
   }
   .cta-animated {
+    display: inline-block;
     border: 2px solid transparent;
-    border-radius: 0.5rem;
+    border-radius: inherit;
     background-clip: padding-box;
     animation: gradient-border 4s infinite;
     border-image-slice: 1;
