@@ -4,7 +4,7 @@ export default function BacktestingSection() {
   section.className = 'section';
   section.innerHTML = `
     <div class="max-w-7xl mx-auto container-pad">
-      <div class="frame frame-glow border-gradient card-bg-gradient shadow-elevated relative corner-glow-bl p-6 sm:p-8">
+      <div class="frame frame-glow border-gradient shadow-elevated p-6 sm:p-8" style="background-image:radial-gradient(circle at 0% 0%, rgba(236,72,153,0.2), transparent 70%), radial-gradient(circle at 100% 100%, rgba(168,85,247,0.2), transparent 70%), linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));">
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div>
             <span class="kicker">Backtesting</span>

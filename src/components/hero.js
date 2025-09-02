@@ -10,9 +10,10 @@ export default function HeroSection() {
         </h1>
         <p class="mt-4 max-w-md text-base sm:text-lg leading-relaxed text-white/80">FuzzFolio helps you identify optimal trading setups...</p>
         <div class="mt-8 flex gap-3">
-          <a href="#" class="cta-primary cta-pill cta-animated">Get setups</a>
+          <a href="#" class="cta-primary cta-pill border-gradient cta-animated">Get setups</a>
           <a href="#" class="cta-secondary cta-pill">Join on Telegram</a>
         </div>
+        <p class="mt-2 text-xs text-white/70">Updates via Telegram, no spam</p>
       </div>
       <div>
         <div class="grid grid-cols-3 gap-3">
