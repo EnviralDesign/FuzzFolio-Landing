@@ -5,7 +5,10 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
 
   // --- State per tile
   const tiles = symbols.map(sym => {
-    const data = Array.from({ length: points }, (_, i) => clamp01(0.5 + 0.25 * Math.sin(i / 6) + randn(0, 0.05)));
+    const data = Array.from(
+      { length: points },
+      (_, i) => clamp11(0.5 * Math.sin(i / 6) + randn(0, 0.3))
+    );
     return { sym, data, el: null, up: 0, down: 0 };
   });
 
@@ -30,12 +33,12 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
     // Update data + scores for each tile
     tiles.forEach(t => {
       const last = t.data[t.data.length - 1];
-      const next = clamp01(last + randn(0, 0.07));
+      const next = clamp11(last + randn(0, 0.3));
       t.data.push(next); t.data.shift();
 
-      // Example scoring: up% is the normalized latest; down% is 100 - up%
-      t.up   = Math.round(next * 100);
-      t.down = 100 - t.up;
+      // Derive long/short scores from shared value
+      t.up   = Math.round(Math.max(next, 0) * 100);
+      t.down = Math.round(Math.max(-next, 0) * 100);
 
       updateTileVisual(t);
     });
@@ -52,7 +55,7 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
   function createTile(t) {
     const card = document.createElement('article');
     card.className = [
-      'market-tile frame border-gradient card-bg-gradient corner-glow relative p-4 md:p-5',
+      'market-tile frame border-gradient card-bg-gradient corner-glow relative overflow-hidden p-4 md:p-5',
       'rounded-2xl'
     ].join(' ');
 
@@ -83,8 +86,10 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
               <stop offset="100%" stop-color="rgba(244,63,94,0.0)"/>
             </linearGradient>
           </defs>
-          <path class="area" fill="url(#upGrad)" d="M0,88 L300,88 Z"/>
-          <path class="line" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" d="M0,88 L300,88"/>
+          <path class="area-up" fill="url(#upGrad)" d="M0,88 L300,88 Z"/>
+          <path class="area-down" fill="url(#downGrad)" d="M0,88 L300,88 Z"/>
+          <path class="line-up" fill="none" stroke="rgba(34,197,94,0.9)" stroke-width="1.5" d="M0,88 L300,88"/>
+          <path class="line-down" fill="none" stroke="rgba(244,63,94,0.9)" stroke-width="1.5" d="M0,88 L300,88"/>
         </svg>
       </div>
 
@@ -101,18 +106,23 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
     // Sparkline
     const svg = t.el.querySelector('.spark-svg');
     const { width, height } = svg.viewBox.baseVal; // 300 × 88
-    const path = pathFrom(t.data, width, height, 8);
-    const area = `${path} L ${width},${height} L 0,${height} Z`;
+    const upSeries = t.data.map(v => Math.max(v, 0));
+    const downSeries = t.data.map(v => v < 0 ? -v : 0);
 
-    const areaEl = svg.querySelector('.area');
-    const lineEl = svg.querySelector('.line');
+    const upPath = pathFrom(upSeries, width, height, 8);
+    const downPath = pathFrom(downSeries, width, height, 8);
+    const upArea = `${upPath} L ${width},${height} L 0,${height} Z`;
+    const downArea = `${downPath} L ${width},${height} L 0,${height} Z`;
 
-    // Pick fill based on dominant side
-    const isUp = t.up >= t.down;
-    areaEl.setAttribute('fill', `url(#${isUp ? 'upGrad' : 'downGrad'})`);
-    areaEl.setAttribute('d', area);
-    lineEl.setAttribute('d', path);
-    lineEl.setAttribute('stroke', isUp ? 'rgba(34,197,94,0.9)' : 'rgba(244,63,94,0.9)');
+    const upAreaEl = svg.querySelector('.area-up');
+    const upLineEl = svg.querySelector('.line-up');
+    const downAreaEl = svg.querySelector('.area-down');
+    const downLineEl = svg.querySelector('.line-down');
+
+    upAreaEl.setAttribute('d', upArea);
+    upLineEl.setAttribute('d', upPath);
+    downAreaEl.setAttribute('d', downArea);
+    downLineEl.setAttribute('d', downPath);
   }
 
   // --- FLIP reordering animation
@@ -140,5 +150,5 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
     }).join(' ');
   }
   function randn(mu = 0, sigma = 1) { return mu + sigma * (Math.random() * 2 - 1); }
-  function clamp01(x) { return Math.max(0, Math.min(1, x)); }
+  function clamp11(x) { return Math.max(-1, Math.min(1, x)); }
 }
