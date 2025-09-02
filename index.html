@@ -6,7 +6,7 @@
   <title>FuzzFolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
 </head>
-<body class="font-[Inter] bg-slate-950 text-white">
+<body class="font-[Inter] app-bg text-white">
   <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur">
     <nav class="max-w-7xl mx-auto container-pad py-4 flex items-center justify-between">
       <div class="font-bold text-xl">FuzzFolio</div>
@@ -14,18 +14,14 @@
       <div class="hidden md:flex gap-6 items-center">
         <a href="#features" class="hover:text-purple-400 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Features</a>
         <a href="#plans" class="hover:text-purple-400 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Plans</a>
-        <a href="#faq" class="hover:text-purple-400 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">FAQ</a>
-        <a href="#cta" class="btn-primary text-sm">Join Free Setup Radar</a>
+        <a href="#cta" class="cta-primary cta-pill text-sm">Get Setups</a>
       </div>
     </nav>
-    <div id="mobile-menu" class="fixed inset-x-0 top-14 z-50 hidden">
-      <div class="mx-3 rounded-xl bg-slate-900/95 backdrop-blur border border-white/10 shadow-lg">
-        <a href="#features" class="block px-4 py-3 border-b border-white/10 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Features</a>
-        <a href="#plans" class="block px-4 py-3 border-b border-white/10 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Plans</a>
-        <a href="#faq" class="block px-4 py-3 border-b border-white/10 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">FAQ</a>
-        <a href="#" class="block px-4 py-3 text-center focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">
-          <span class="btn-primary inline-block w-full">Join Free Setup Radar</span>
-        </a>
+    <div id="mobile-menu" class="fixed inset-0 z-50 hidden">
+      <div class="h-full w-full bg-slate-900/95 backdrop-blur flex flex-col items-center justify-center gap-6 text-lg">
+        <a href="#features" class="focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Features</a>
+        <a href="#plans" class="focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Plans</a>
+        <a href="#" class="cta-primary cta-pill focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Get Setups</a>
       </div>
     </div>
   </header>
