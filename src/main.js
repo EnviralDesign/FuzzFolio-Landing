@@ -6,6 +6,7 @@ import ShowcaseSection from './components/showcaseSection.js';
 import StatisticBanner from './components/statisticBanner.js';
 import BacktestingSection from './components/backtestingSection.js';
 import PricingPlans from './components/pricingPlans.js';
+import FAQAccordion from './components/faqAccordion.js';
 import Testimonials from './components/testimonials.js';
 import CTASection from './components/ctaSection.js';
 import Footer from './components/footer.js';
@@ -18,6 +19,7 @@ const app = document.getElementById('app');
   StatisticBanner,
   BacktestingSection,
   PricingPlans,
+  FAQAccordion,
   Testimonials,
   CTASection,
   Footer
