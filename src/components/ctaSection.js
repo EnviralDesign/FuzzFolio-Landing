@@ -7,7 +7,8 @@ export default function CTASection() {
       <div class="frame p-8 text-center" style="background-image:
         radial-gradient(120% 90% at 0% 0%, rgba(168,85,247,.25), transparent 60%),
         radial-gradient(120% 90% at 100% 0%, rgba(236,72,153,.20), transparent 55%);">
-        <h2 class="text-3xl font-bold">Ready to see clean setups?</h2>
+        <span class="kicker">Join</span>
+        <h2 class="text-3xl font-bold mt-2">Ready to see clean setups?</h2>
         <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
           <a href="#" class="cta-primary cta-pill">Get Setups</a>
           <a href="#" class="cta-secondary cta-pill">Join on Telegram</a>

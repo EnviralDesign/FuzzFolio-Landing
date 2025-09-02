@@ -4,7 +4,8 @@ export default function FAQAccordion() {
   section.className = 'section bg-slate-900';
   section.innerHTML = `
     <div class="max-w-7xl mx-auto container-pad">
-      <h2 class="section-title">FAQ</h2>
+      <span class="kicker">Support</span>
+      <h2 class="section-title mt-2">FAQ</h2>
       <div class="space-y-4 max-w-3xl mx-auto">
         <div class="frame frame-ghost overflow-hidden">
           <button class="w-full text-left px-4 py-3 flex justify-between items-center faq-question focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40" aria-expanded="false" aria-controls="faq1">
