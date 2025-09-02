@@ -175,6 +175,15 @@
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
   }
+
+  /* Market simulation tiles */
+  .market-tile { transition: box-shadow .25s ease, background-color .25s ease; }
+  .market-tile:hover { box-shadow: 0 10px 30px rgba(0,0,0,.45); }
+  .market-tile .score-up { color: rgba(255,255,255,.85); }
+  .market-tile .score-down { color: #fb7185; }
+  @media (prefers-reduced-motion: reduce) {
+    .market-tile, .market-grid * { animation: none !important; transition: none !important; }
+  }
 }
 
 @layer components {
