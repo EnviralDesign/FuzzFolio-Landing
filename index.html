@@ -17,14 +17,20 @@
         <a href="#cta" class="cta-primary cta-pill text-sm">Get Setups</a>
       </div>
     </nav>
-    <div id="mobile-menu" class="fixed inset-0 z-50 hidden">
-      <div class="h-full w-full bg-slate-900/95 backdrop-blur flex flex-col items-center justify-center gap-6 text-lg">
+  </header>
+  <div id="mobile-menu" class="fixed inset-0 z-[60] hidden">
+    <div class="h-full w-full bg-slate-900/95 backdrop-blur flex flex-col">
+      <div class="flex items-center justify-between p-4">
+        <div class="font-bold text-xl">FuzzFolio</div>
+        <button id="menu-close" class="p-2 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">✕</button>
+      </div>
+      <nav class="mt-10 flex flex-col items-center gap-6 text-lg">
         <a href="#features" class="focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Features</a>
         <a href="#plans" class="focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Plans</a>
-        <a href="#" class="cta-primary cta-pill focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Get Setups</a>
-      </div>
+        <a href="#cta" class="cta-primary cta-pill focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Get Setups</a>
+      </nav>
     </div>
-  </header>
+  </div>
   <main id="app"></main>
   <script type="module" src="/src/main.js"></script>
 </body>
