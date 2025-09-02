@@ -69,7 +69,7 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
 
       <div class="mt-2 flex items-center justify-between">
         <span class="inline-flex items-center gap-2">
-          <span class="score-up text-white/80 text-base md:text-lg font-semibold"><span>0</span>%</span>
+          <span class="score-up text-green-400 text-base md:text-lg font-semibold"><span>0</span>%</span>
         </span>
         <span class="inline-flex items-center gap-2">
           <span class="score-down text-rose-400 text-base md:text-lg font-semibold"><span>0</span>%</span>
