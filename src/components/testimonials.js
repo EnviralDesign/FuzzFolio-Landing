@@ -73,3 +73,4 @@ export default function Testimonials() {
   `;
   return section;
 }
+// NOT IN USE: This section is currently hidden from the landing flow while we gather more testimonials.
