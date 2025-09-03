@@ -4,7 +4,7 @@ export default function PricingPlans() {
   section.className = 'section';
   section.innerHTML = `
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <h2 class="section-title"><span class="bg-gradient-to-b from-white to-slate-300/90 bg-clip-text text-transparent">Plans</span></h2>
+      <h2 class="section-title"><span class="bg-gradient-to-b from-white to-slate-300/90 bg-clip-text text-transparent">Pricing</span></h2>
       <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 items-stretch">
           <!-- Free -->
           <div tabindex="0" class="group relative p-6 rounded-2xl border border-white/10 bg-slate-800/50 text-left transition-all duration-200 hover:-translate-y-[2px] shadow-md hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-white/10 motion-safe:animate-fade-up [animation-delay:0s] flex flex-col">
