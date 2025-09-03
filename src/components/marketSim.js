@@ -57,8 +57,10 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
   function createTile(t) {
     const card = document.createElement('article');
     card.className = [
-      'market-tile frame border-gradient card-bg-gradient corner-glow relative overflow-hidden p-4 md:p-5',
-      'rounded-2xl'
+      'market-tile frame relative overflow-hidden p-4 md:p-5',
+      'rounded-2xl',
+      // Replace card-bg-gradient + corner-glow with Tailwind arbitrary multi-layer background
+      "bg-[radial-gradient(circle_at_100%_0%,rgba(236,72,153,0.15),transparent_70%),radial-gradient(circle_at_0%_100%,rgba(168,85,247,0.15),transparent_70%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]"
     ].join(' ');
 
     card.innerHTML = `
@@ -77,20 +79,10 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
 
       <div class="spark mt-3 md:mt-4 rounded-xl bg-white/5 shadow-inset overflow-hidden border border-white/10">
         <svg class="spark-svg block w-full h-[88px] md:h-[104px]" viewBox="0 0 300 104" preserveAspectRatio="none" aria-hidden="true">
-          <defs>
-            <linearGradient id="upGrad" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stop-color="rgba(34,197,94,0.8)"/>
-              <stop offset="100%" stop-color="rgba(34,197,94,0.0)"/>
-            </linearGradient>
-            <linearGradient id="downGrad" x1="0" x2="0" y1="0" y2="1">
-              <stop offset="0%" stop-color="rgba(244,63,94,0.8)"/>
-              <stop offset="100%" stop-color="rgba(244,63,94,0.0)"/>
-            </linearGradient>
-          </defs>
-          <path class="area-up" fill="url(#upGrad)" d="M0,104 L300,104 Z"/>
-          <path class="area-down" fill="url(#downGrad)" d="M0,104 L300,104 Z"/>
-          <path class="line-up" fill="none" stroke="rgba(34,197,94,0.9)" stroke-width="1.5" d="M0,104 L300,104"/>
-          <path class="line-down" fill="none" stroke="rgba(244,63,94,0.9)" stroke-width="1.5" d="M0,104 L300,104"/>
+          <path class="area-up fill-green-500/30" d="M0,104 L300,104 Z"/>
+          <path class="area-down fill-rose-500/30" d="M0,104 L300,104 Z"/>
+          <path class="line-up fill-none stroke-green-500/90 stroke-[1.5]" d="M0,104 L300,104"/>
+          <path class="line-down fill-none stroke-rose-500/90 stroke-[1.5]" d="M0,104 L300,104"/>
         </svg>
       </div>
     `;

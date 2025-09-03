@@ -4,7 +4,7 @@ export default function Testimonials() {
   section.innerHTML = `
     <div class="max-w-7xl mx-auto container-pad">
       <span class="kicker">Testimonials</span>
-      <h2 class="section-title mt-2"><span class="heading-gradient">Traders</span> say</h2>
+      <h2 class="section-title mt-2"><span class="bg-gradient-to-b from-white to-slate-300/90 bg-clip-text text-transparent">Traders</span> say</h2>
       <div class="overflow-hidden edge-fade">
         <div class="flex gap-6 w-max logo-ticker">
         <div class="min-w-[260px] flex-shrink-0 frame-ghost shadow-inset p-6 snap-start">
