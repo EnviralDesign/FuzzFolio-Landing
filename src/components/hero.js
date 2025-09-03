@@ -8,7 +8,7 @@ export default function HeroSection() {
     "bg-[radial-gradient(140%_120%_at_0%_0%,rgba(168,85,247,0.35),transparent_60%),radial-gradient(140%_120%_at_100%_0%,rgba(236,72,153,0.30),transparent_55%)]"
   ].join(' ');
   section.innerHTML = `
-    <div class="max-w-7xl mx-auto container-pad">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="grid md:grid-cols-2 gap-8 items-start">
         <div>
           <h1 class="text-6xl md:text-7xl font-extrabold leading-tight tracking-[-0.02em]">

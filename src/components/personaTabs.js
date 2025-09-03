@@ -3,7 +3,7 @@ export default function PersonaTabs() {
   section.id = 'personas';
   section.className = 'section bg-slate-900';
   section.innerHTML = `
-    <div class="max-w-7xl mx-auto container-pad">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <h2 class="section-title">Who it's for</h2>
       <div class="flex flex-wrap gap-4 justify-center mb-8" role="tablist">
         <button id="tab-day" class="persona-tab btn-primary" data-target="day" role="tab" aria-selected="true" aria-controls="panel-day">Day Trader</button>

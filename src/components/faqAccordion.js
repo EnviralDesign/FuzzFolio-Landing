@@ -3,7 +3,7 @@ export default function FAQAccordion() {
   section.id = 'faq';
   section.className = 'section';
   section.innerHTML = `
-    <div class="max-w-7xl mx-auto container-pad">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <span class="kicker">Support</span>
       <h2 class="section-title mt-2"><span class="bg-gradient-to-b from-white to-slate-300/90 bg-clip-text text-transparent">FAQ</span></h2>
       <div class="space-y-4 max-w-3xl mx-auto">

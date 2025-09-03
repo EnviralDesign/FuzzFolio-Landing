@@ -58,7 +58,7 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
     const card = document.createElement('article');
     card.className = [
       'market-tile frame relative overflow-hidden p-4 md:p-5',
-      'rounded-2xl',
+      'rounded-2xl transition-shadow duration-200 hover:shadow-[0_10px_30px_rgba(0,0,0,0.45)]',
       // Replace card-bg-gradient + corner-glow with Tailwind arbitrary multi-layer background
       "bg-[radial-gradient(circle_at_100%_0%,rgba(236,72,153,0.15),transparent_70%),radial-gradient(circle_at_0%_100%,rgba(168,85,247,0.15),transparent_70%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]"
     ].join(' ');

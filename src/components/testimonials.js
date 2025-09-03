@@ -2,7 +2,7 @@ export default function Testimonials() {
   const section = document.createElement('section');
   section.className = 'section';
   section.innerHTML = `
-    <div class="max-w-7xl mx-auto container-pad">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <span class="kicker">Testimonials</span>
       <h2 class="section-title mt-2"><span class="bg-gradient-to-b from-white to-slate-300/90 bg-clip-text text-transparent">Traders</span> say</h2>
       <div class="overflow-hidden edge-fade">

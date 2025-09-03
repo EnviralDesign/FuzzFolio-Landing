@@ -9,8 +9,7 @@
 @layer utilities {
   /* Gradients handled via Tailwind utilities/arbitrary values */
 
-  /* Better mobile-safe section gutters */
-  .container-pad { @apply px-4 sm:px-6; }
+  /* Section gutters now inline via Tailwind */
 
   /* Edge-fade masks for scroll areas (if we keep horizontal scroll anywhere) */
   .edge-fade {
@@ -41,8 +40,7 @@
            text-white/80 px-2 py-0.5 rounded;
   }
 
-  /* App canvas */
-  .app-bg { background-color: #0b1220; }
+  /* Body background now set via Tailwind */
 
   /* Title kicker (small label above section titles) */
   .kicker {
@@ -107,11 +105,7 @@
     to { transform: translateX(-50%); }
   }
 
-  /* Market simulation tiles */
-  .market-tile { transition: box-shadow .25s ease, background-color .25s ease; }
-  .market-tile:hover { box-shadow: 0 10px 30px rgba(0,0,0,.45); }
-  .market-tile .score-up { color: #4ade80; }
-  .market-tile .score-down { color: #fb7185; }
+  /* Market tile transitions/colors handled via Tailwind */
   @media (prefers-reduced-motion: reduce) {
     .market-tile, .market-grid * { animation: none !important; transition: none !important; }
   }

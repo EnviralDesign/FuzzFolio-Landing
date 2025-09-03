@@ -3,7 +3,7 @@ export default function BacktestingSection() {
   section.id = 'backtesting';
   section.className = 'section';
   section.innerHTML = `
-    <div class="max-w-7xl mx-auto container-pad">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6">
       <div class="frame frame-glow shadow-elevated p-6 sm:p-8 bg-[radial-gradient(circle_at_0%_0%,rgba(236,72,153,0.2),transparent_70%),radial-gradient(circle_at_100%_100%,rgba(168,85,247,0.2),transparent_70%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]">
         <div class="grid md:grid-cols-2 gap-8 items-center">
           <div>
