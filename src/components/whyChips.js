@@ -1,5 +1,6 @@
 export default function WhyChips() {
   const section = document.createElement('section');
+  section.id = 'why';
   section.className = 'section py-20 md:py-24';
   section.innerHTML = `
     <div class="max-w-7xl mx-auto px-4 sm:px-6">

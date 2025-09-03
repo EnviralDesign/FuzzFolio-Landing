@@ -41,3 +41,4 @@ export default function FeatureGrid() {
   `;
   return section;
 }
+// NOT IN USE: This section is currently not used in the landing flow.

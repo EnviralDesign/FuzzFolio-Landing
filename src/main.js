@@ -1,29 +1,34 @@
 import './styles.css';
 
 import HeroSection from './components/hero.js';
-import FeatureGrid from './components/featureGrid.js';
 import WhyChips from './components/whyChips.js';
-import ShowcaseSection from './components/showcaseSection.js';
-import StatisticBanner from './components/statisticBanner.js';
-import BacktestingSection from './components/backtestingSection.js';
+import InsideApp from './components/insideApp.js';
+import HowItWorks from './components/howItWorks.js';
+import SampleMoments from './components/sampleMoments.js';
 import PricingPlans from './components/pricingPlans.js';
 import FAQAccordion from './components/faqAccordion.js';
 import Testimonials from './components/testimonials.js';
-import CTASection from './components/ctaSection.js';
 import Footer from './components/footer.js';
 
 const app = document.getElementById('app');
 [
+  // 0) Hero
   HeroSection,
+  // 1) Why it works
   WhyChips,
-  FeatureGrid,
-  ShowcaseSection,
-  StatisticBanner,
-  BacktestingSection,
-  PricingPlans,
-  FAQAccordion,
+  // 2) Inside the app
+  InsideApp,
+  // 3) How it works (Build → Validate → Deploy)
+  HowItWorks,
+  // 4) Sample moments (Telegram)
+  SampleMoments,
+  // 5) Testimonials
   Testimonials,
-  CTASection,
+  // 6) Plans
+  PricingPlans,
+  // 7) FAQ
+  FAQAccordion,
+  // Footer
   Footer
 ].forEach(Component => app.appendChild(Component()));
 

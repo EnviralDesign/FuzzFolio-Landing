@@ -26,3 +26,4 @@ export default function StatisticBanner() {
   ticker.innerHTML += ticker.innerHTML;
   return section;
 }
+// NOT IN USE: This section is currently not used in the landing flow.

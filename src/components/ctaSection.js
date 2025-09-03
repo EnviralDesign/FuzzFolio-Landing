@@ -8,8 +8,8 @@ export default function CTASection() {
         <span class="kicker">Join</span>
         <h2 class="text-4xl md:text-5xl font-bold mt-2">Ready to see <span class="bg-gradient-to-b from-white to-slate-300/90 bg-clip-text text-transparent">clean setups</span>?</h2>
         <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
-          <a href="#" class="cta-primary cta-pill bg-gradient-to-r from-purple-600 to-pink-500">Get setups</a>
-          <a href="#" class="cta-secondary cta-pill">Join on Telegram</a>
+          <a href="#" class="cta-primary cta-pill bg-gradient-to-r from-purple-600 to-pink-500">Start free</a>
+          <a href="#" class="cta-secondary cta-pill">See sample moments (Telegram)</a>
         </div>
         <p class="mt-3 text-sm text-white/70 max-w-sm mx-auto">No credit card required</p>
         <p class="mt-1 text-sm text-white/70 max-w-sm mx-auto">Updates via Telegram, no spam</p>
@@ -18,3 +18,4 @@ export default function CTASection() {
   `;
   return section;
 }
+// NOT IN USE: This section is currently not used in the landing flow.
