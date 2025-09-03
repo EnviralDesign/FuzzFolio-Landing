@@ -44,3 +44,26 @@ function closeMenu() {
 btn?.addEventListener('click', openMenu);
 closeBtn?.addEventListener('click', closeMenu);
 menu?.querySelectorAll('a')?.forEach(link => link.addEventListener('click', closeMenu));
+
+// Header behavior: transparent when at top, frosted on scroll
+const siteHeader = document.getElementById('site-header');
+const desktopLinks = document.getElementById('desktop-links');
+
+function applyHeaderState() {
+  const atTop = window.scrollY < 10;
+  if (!siteHeader) return;
+  if (atTop) {
+    siteHeader.classList.remove('bg-slate-900/80', 'backdrop-blur');
+    siteHeader.classList.add('bg-transparent', 'backdrop-blur-0');
+    desktopLinks?.classList.add('opacity-0', 'md:pointer-events-none');
+    desktopLinks?.classList.remove('opacity-100', 'md:pointer-events-auto');
+  } else {
+    siteHeader.classList.remove('bg-transparent', 'backdrop-blur-0');
+    siteHeader.classList.add('bg-slate-900/80', 'backdrop-blur');
+    desktopLinks?.classList.remove('opacity-0', 'md:pointer-events-none');
+    desktopLinks?.classList.add('opacity-100', 'md:pointer-events-auto');
+  }
+}
+
+applyHeaderState();
+window.addEventListener('scroll', applyHeaderState, { passive: true });

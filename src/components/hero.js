@@ -4,6 +4,10 @@ export default function HeroSection() {
   const section = document.createElement('section');
   section.className = [
     'hero section relative',
+    // Full viewport height hero; override section padding
+    'min-h-[100svh] py-0 pt-20 md:pt-24',
+    // Vertical centering on larger screens
+    'flex items-start md:items-center',
     // Tailwind arbitrary multi-layer background to replace bg-hero-gradient
     "bg-[radial-gradient(140%_120%_at_0%_0%,rgba(168,85,247,0.35),transparent_60%),radial-gradient(140%_120%_at_100%_0%,rgba(236,72,153,0.30),transparent_55%)]"
   ].join(' ');

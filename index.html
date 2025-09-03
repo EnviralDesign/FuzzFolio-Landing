@@ -9,11 +9,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body class="bg-[#0b1220] text-white">
-  <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur">
+  <header id="site-header" class="fixed top-0 inset-x-0 z-50 bg-transparent backdrop-blur-0 transition-all duration-300">
     <nav class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
       <div class="font-bold text-xl">FuzzFolio</div>
       <button id="menu-toggle" class="md:hidden p-2 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40" aria-expanded="false" aria-controls="mobile-menu">☰</button>
-      <div class="hidden md:flex gap-6 items-center">
+      <div id="desktop-links" class="hidden md:flex gap-6 items-center transition-opacity duration-300 opacity-0 md:pointer-events-none">
         <a href="#features" class="hover:text-purple-400 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Features</a>
         <a href="#plans" class="hover:text-purple-400 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">Plans</a>
         <a href="#faq" class="hover:text-purple-400 focus-visible:outline-none focus-visible:ring focus-visible:ring-purple-500/40">FAQ</a>
