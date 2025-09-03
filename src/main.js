@@ -7,7 +7,7 @@ import HowItWorks from './components/howItWorks.js';
 import SampleMoments from './components/sampleMoments.js';
 import PricingPlans from './components/pricingPlans.js';
 import FAQAccordion from './components/faqAccordion.js';
-import Testimonials from './components/testimonials.js';
+// import Testimonials from './components/testimonials.js'; // Hidden for now: awaiting more testimonials
 import Footer from './components/footer.js';
 
 const app = document.getElementById('app');
@@ -22,8 +22,8 @@ const app = document.getElementById('app');
   HowItWorks,
   // 4) Sample moments (Telegram)
   SampleMoments,
-  // 5) Testimonials
-  Testimonials,
+  // 5) Testimonials (hidden for now)
+  // Testimonials,
   // 6) Plans
   PricingPlans,
   // 7) FAQ
