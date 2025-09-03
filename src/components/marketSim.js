@@ -62,9 +62,8 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
     ].join(' ');
 
     card.innerHTML = `
-      <header class="flex items-start justify-between">
+      <header class="flex items-start">
         <h3 class="text-lg md:text-xl font-semibold tracking-[-0.01em]">${t.sym}</h3>
-        <span class="inline-flex items-center text-white/60 text-sm"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-5.3 5.3-1.4-1.42 5.3-5.3H14V3zM5 5h7v2H7.41l5.3 5.3-1.42 1.4-5.3-5.3V12H5V5z"/></svg></span>
       </header>
 
       <div class="mt-2 flex items-center justify-between">
@@ -77,7 +76,7 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
       </div>
 
       <div class="spark mt-3 md:mt-4 rounded-xl bg-white/5 shadow-inset overflow-hidden border border-white/10">
-        <svg class="spark-svg block w-full h-[72px] md:h-[88px]" viewBox="0 0 300 88" preserveAspectRatio="none" aria-hidden="true">
+        <svg class="spark-svg block w-full h-[88px] md:h-[104px]" viewBox="0 0 300 104" preserveAspectRatio="none" aria-hidden="true">
           <defs>
             <linearGradient id="upGrad" x1="0" x2="0" y1="0" y2="1">
               <stop offset="0%" stop-color="rgba(34,197,94,0.8)"/>
@@ -88,14 +87,12 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
               <stop offset="100%" stop-color="rgba(244,63,94,0.0)"/>
             </linearGradient>
           </defs>
-          <path class="area-up" fill="url(#upGrad)" d="M0,88 L300,88 Z"/>
-          <path class="area-down" fill="url(#downGrad)" d="M0,88 L300,88 Z"/>
-          <path class="line-up" fill="none" stroke="rgba(34,197,94,0.9)" stroke-width="1.5" d="M0,88 L300,88"/>
-          <path class="line-down" fill="none" stroke="rgba(244,63,94,0.9)" stroke-width="1.5" d="M0,88 L300,88"/>
+          <path class="area-up" fill="url(#upGrad)" d="M0,104 L300,104 Z"/>
+          <path class="area-down" fill="url(#downGrad)" d="M0,104 L300,104 Z"/>
+          <path class="line-up" fill="none" stroke="rgba(34,197,94,0.9)" stroke-width="1.5" d="M0,104 L300,104"/>
+          <path class="line-down" fill="none" stroke="rgba(244,63,94,0.9)" stroke-width="1.5" d="M0,104 L300,104"/>
         </svg>
       </div>
-
-      <footer class="mt-3 text-[13px] text-white/60">about 3 hours</footer>
     `;
     return card;
   }
@@ -107,7 +104,7 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
 
     // Sparkline
     const svg = t.el.querySelector('.spark-svg');
-    const { width, height } = svg.viewBox.baseVal; // 300 × 88
+    const { width, height } = svg.viewBox.baseVal; // 300 × 104
     const upSeries = t.data.map(v => Math.max(v, 0));
     const downSeries = t.data.map(v => v < 0 ? -v : 0);
 
