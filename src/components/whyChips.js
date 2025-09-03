@@ -4,7 +4,7 @@ export default function WhyChips() {
   section.className = 'section py-20 md:py-24';
   section.innerHTML = `
     <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <h2 class="text-5xl md:text-6xl font-bold tracking-tight text-center">Why it <span class="bg-gradient-to-b from-white to-slate-300/90 bg-clip-text text-transparent">works</span></h2>
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-center">Why it <span class="bg-gradient-to-b from-white to-slate-300/90 bg-clip-text text-transparent">works</span></h2>
 
       <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
         <!-- Live ranking dashboard -->

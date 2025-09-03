@@ -1,38 +1,38 @@
+import dashboardImg from '../media/dashboard.png';
+import builderImg from '../media/builder.png';
+import backtestingImg from '../media/backtesting.png';
+
 export default function InsideApp() {
   const section = document.createElement('section');
   section.id = 'inside';
-  section.className = 'section py-20 md:py-24';
+  section.className = 'section px-6 md:px-8 py-24 md:py-28';
   section.innerHTML = `
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <h2 class="text-5xl md:text-6xl font-bold tracking-tight text-center">Inside the <span class="bg-gradient-to-b from-white to-slate-300/90 bg-clip-text text-transparent">app</span></h2>
+    <div class="max-w-7xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-center">Inside the <span class="bg-gradient-to-b from-white to-slate-300/90 bg-clip-text text-transparent">app</span></h2>
 
-      <div class="mt-10 grid grid-cols-12 gap-6 md:gap-8">
+      <div class="mt-10 grid grid-cols-12 gap-8 md:gap-10">
         <!-- Top row: one big full-width dashboard -->
-        <figure class="relative col-span-12 rounded-2xl overflow-hidden border border-white/10 bg-slate-800/40 shadow-md">
-          <div class="skeleton aspect-[16/9]" role="img" aria-label="Dashboard preview">
-            <span class="skeleton-label">dashboard</span>
-          </div>
-          <figcaption class="px-3 py-2 text-sm text-white/70">1. Ranked tiles — instrument × profile; one score + short history.</figcaption>
-          <span class="absolute top-4 left-4 text-[11px] px-2 py-0.5 rounded-full bg-white/10 border border-white/10">DASHBOARD</span>
-          <span class="absolute top-4 right-4 text-[11px] px-2 py-0.5 rounded-full bg-white/10 border border-white/10">Simulated data</span>
-        </figure>
+        <div class="col-span-12">
+          <figure class="aspect-[16/9] rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.45)]">
+            <img src="${dashboardImg}" alt="Dashboard preview showing ranked market tiles with scores and sparklines." loading="lazy" decoding="async" class="w-full h-full object-cover" />
+          </figure>
+          <figcaption class="mt-2 text-sm text-white/70">Dashboard — Ranked tiles, instrument × profile; one score + short history.</figcaption>
+        </div>
 
         <!-- Bottom row: two halves -->
-        <figure class="relative col-span-12 lg:col-span-6 rounded-2xl overflow-hidden border border-white/10 bg-slate-800/40 shadow-md">
-          <div class="skeleton aspect-[16/10]" role="img" aria-label="Profile builder">
-            <span class="skeleton-label">builder</span>
-          </div>
-          <figcaption class="px-3 py-2 text-sm text-white/70">Builder — indicators, fuzzy rules, weights.</figcaption>
-          <span class="absolute top-4 left-4 text-[11px] px-2 py-0.5 rounded-full bg-white/10 border border-white/10">BUILDER</span>
-        </figure>
+        <div class="col-span-12 lg:col-span-6">
+          <figure class="aspect-[16/10] rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.45)]">
+            <img src="${builderImg}" alt="Profile Builder with indicators, fuzzy rules, and weights." loading="lazy" decoding="async" class="w-full h-full object-cover" />
+          </figure>
+          <figcaption class="mt-2 text-sm text-white/70">Builder — Indicators, fuzzy rules, weights.</figcaption>
+        </div>
 
-        <figure class="relative col-span-12 lg:col-span-6 rounded-2xl overflow-hidden border border-white/10 bg-slate-800/40 shadow-md">
-          <div class="skeleton aspect-[16/10]" role="img" aria-label="Backtesting">
-            <span class="skeleton-label">backtest</span>
-          </div>
-          <figcaption class="px-3 py-2 text-sm text-white/70">Backtesting — run while editing; compare variants fast.</figcaption>
-          <span class="absolute top-4 left-4 text-[11px] px-2 py-0.5 rounded-full bg-white/10 border border-white/10">BACKTESTING</span>
-        </figure>
+        <div class="col-span-12 lg:col-span-6">
+          <figure class="aspect-[16/10] rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.45)]">
+            <img src="${backtestingImg}" alt="Backtesting panel displaying profile behavior on recent history." loading="lazy" decoding="async" class="w-full h-full object-cover" />
+          </figure>
+          <figcaption class="mt-2 text-sm text-white/70">Backtesting — Run while editing; compare variants fast; deploy when ready.</figcaption>
+        </div>
       </div>
     </div>
   `;
