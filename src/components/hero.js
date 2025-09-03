@@ -16,16 +16,16 @@ export default function HeroSection() {
       <div class="grid md:grid-cols-2 gap-8 items-start">
         <div>
           <h1 class="text-6xl md:text-7xl font-extrabold leading-tight tracking-[-0.02em]">
-            See clean setups.<br/>Trade on <span class="bg-gradient-to-b from-white to-slate-300/90 bg-clip-text text-transparent">your terms</span>.
+            Let the best setups <span class="bg-gradient-to-b from-white to-slate-300/90 bg-clip-text text-transparent">find you.</span>
           </h1>
           <p class="mt-4 text-base sm:text-lg text-white/80 leading-relaxed">
-            FuzzFolio helps you identify optimal trading setups with AI-powered analysis.
+            Craft fuzzy-weighted scoring profiles from indicators you trust. Backtest while you edit to see expected behavior—then let the dashboard surface the opportunities you care about in real time.
           </p>
           <div class="mt-6 flex items-center gap-3">
-            <a href="#" class="cta-primary cta-pill bg-gradient-to-r from-purple-600 to-pink-500">Get setups</a>
-            <a href="#" class="cta-secondary cta-pill">Join on Telegram</a>
+            <a href="#" class="cta-primary cta-pill bg-gradient-to-r from-purple-600 to-pink-500">Start free</a>
+            <a href="#" class="cta-secondary cta-pill">See sample setups (Telegram)</a>
           </div>
-          <p class="mt-3 text-sm text-white/60">Updates via Telegram, no spam</p>
+          <p class="mt-3 text-sm text-white/60">No broker connect · Setup ≈ 2 min · image.png · Cancel anytime</p>
         </div>
         <div id="hero-market-sim" class="md:mt-2"></div>
       </div>

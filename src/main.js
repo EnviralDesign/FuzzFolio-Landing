@@ -2,6 +2,7 @@ import './styles.css';
 
 import HeroSection from './components/hero.js';
 import FeatureGrid from './components/featureGrid.js';
+import WhyChips from './components/whyChips.js';
 import ShowcaseSection from './components/showcaseSection.js';
 import StatisticBanner from './components/statisticBanner.js';
 import BacktestingSection from './components/backtestingSection.js';
@@ -14,6 +15,7 @@ import Footer from './components/footer.js';
 const app = document.getElementById('app');
 [
   HeroSection,
+  WhyChips,
   FeatureGrid,
   ShowcaseSection,
   StatisticBanner,

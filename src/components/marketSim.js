@@ -1,7 +1,17 @@
 // src/components/marketSim.js
 export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJPY'], points = 60, intervalMs = 1000 } = {}) {
-  const wrap = document.createElement('div');
-  wrap.className = 'market-grid grid grid-cols-2 gap-4 md:gap-5';
+  // Container with small label + grid
+  const container = document.createElement('div');
+  container.className = 'space-y-2';
+
+  const label = document.createElement('div');
+  label.className = 'kicker inline-flex';
+  label.textContent = 'Simulated Playback';
+  container.appendChild(label);
+
+  const gridEl = document.createElement('div');
+  gridEl.className = 'market-grid grid grid-cols-2 gap-4 md:gap-5';
+  container.appendChild(gridEl);
 
   const noise = 0.3 * 0.75; // reduce stochastic variance by 25%
 
@@ -14,7 +24,7 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
     return { sym, data, el: null, up: 0, down: 0 };
   });
 
-  tiles.forEach(t => { t.el = createTile(t); wrap.appendChild(t.el); updateTileVisual(t); });
+  tiles.forEach(t => { t.el = createTile(t); gridEl.appendChild(t.el); updateTileVisual(t); });
 
   const media = window.matchMedia('(prefers-reduced-motion: reduce)');
   let cadence = media.matches ? Math.max(intervalMs, 3000) : intervalMs;
@@ -47,20 +57,18 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
 
     // Sort (highest opportunity first)
     const sorted = [...tiles].sort((a,b) => Math.max(b.up, b.down) - Math.max(a.up, a.down));
-    flipReorder(wrap, sorted.map(t => t.el));
+    flipReorder(gridEl, sorted.map(t => t.el));
   }
 
-  return wrap;
+  return container;
 
   // --- DOM helpers
 
   function createTile(t) {
     const card = document.createElement('article');
     card.className = [
-      'market-tile frame relative overflow-hidden p-4 md:p-5',
-      'rounded-2xl transition-shadow duration-200 hover:shadow-[0_10px_30px_rgba(0,0,0,0.45)]',
-      // Replace card-bg-gradient + corner-glow with Tailwind arbitrary multi-layer background
-      "bg-[radial-gradient(circle_at_100%_0%,rgba(236,72,153,0.15),transparent_70%),radial-gradient(circle_at_0%_100%,rgba(168,85,247,0.15),transparent_70%),linear-gradient(180deg,rgba(255,255,255,0.02),rgba(255,255,255,0.01))]"
+      'market-tile relative overflow-hidden p-4 md:p-5',
+      'rounded-2xl border border-white/10 bg-slate-800/50 shadow'
     ].join(' ');
 
     card.innerHTML = `
@@ -86,6 +94,7 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
         </svg>
       </div>
     `;
+
     return card;
   }
 
@@ -114,6 +123,8 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
     upLineEl.setAttribute('d', upPath);
     downAreaEl.setAttribute('d', downArea);
     downLineEl.setAttribute('d', downPath);
+
+    // No caption updates (hover/tap micro-caption removed)
   }
 
   // --- FLIP reordering animation
