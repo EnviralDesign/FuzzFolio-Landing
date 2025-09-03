@@ -95,10 +95,10 @@
   .corner-glow::after {
     content: '';
     position: absolute;
-    width: 60%;
-    height: 60%;
-    top: -15%;
-    right: -15%;
+    width: 200%;
+    height: 200%;
+    top: -100%;
+    right: -50%;
     background: radial-gradient(circle, rgba(236,72,153,0.35), transparent 70%);
     border-radius: 50%;
     pointer-events: none;

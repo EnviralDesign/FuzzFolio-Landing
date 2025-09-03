@@ -1,7 +1,7 @@
 export default function FAQAccordion() {
   const section = document.createElement('section');
   section.id = 'faq';
-  section.className = 'section bg-slate-900';
+  section.className = 'section';
   section.innerHTML = `
     <div class="max-w-7xl mx-auto container-pad">
       <span class="kicker">Support</span>
