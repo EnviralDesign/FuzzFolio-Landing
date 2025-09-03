@@ -4,10 +4,13 @@ export default function MarketSim({ symbols = ['AUDUSD','GBPUSD','EURUSD','USDJP
   const container = document.createElement('div');
   container.className = 'space-y-2';
 
-  const label = document.createElement('div');
-  label.className = 'kicker inline-flex';
+  const labelWrap = document.createElement('div');
+  labelWrap.className = 'flex justify-end';
+  const label = document.createElement('span');
+  label.className = 'kicker text-[11px] md:text-[12px] font-medium w-max md:mb-2';
   label.textContent = 'Simulated Playback';
-  container.appendChild(label);
+  labelWrap.appendChild(label);
+  container.appendChild(labelWrap);
 
   const gridEl = document.createElement('div');
   gridEl.className = 'market-grid grid grid-cols-2 gap-4 md:gap-5';
