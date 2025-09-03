@@ -47,22 +47,22 @@ export default function InsideApp() {
           <figure class="aspect-[16/9] rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.45)]">
             ${pictureHTML('dashboard', '(min-width:1024px) 80rem, 100vw', 'Dashboard preview showing ranked market tiles with scores and sparklines.')}
           </figure>
-          <figcaption class="mt-2 text-sm text-white/70">Dashboard — Ranked tiles, instrument × profile; one score + short history.</figcaption>
+          <figcaption class="mt-2 text-sm text-white/70"><span class="font-semibold text-white">Dashboard</span> — Ranked tiles; instrument × profile; one score + short history.</figcaption>
         </div>
 
         <!-- Bottom row: two halves -->
         <div class="col-span-12 lg:col-span-6">
           <figure class="aspect-[16/10] rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.45)]">
-            ${pictureHTML('builder', '(min-width:1024px) 40rem, 100vw', 'Profile Builder with indicators, fuzzy rules, and weights.')}
+            ${pictureHTML('builder', '(min-width:1024px) 40rem, 100vw', 'Profile Builder with indicator rules, fuzzy thresholds, and weights.')}
           </figure>
-          <figcaption class="mt-2 text-sm text-white/70">Builder — Indicators, fuzzy rules, weights.</figcaption>
+          <figcaption class="mt-2 text-sm text-white/70"><span class="font-semibold text-white">Builder</span> — Indicators, fuzzy rules, weights.</figcaption>
         </div>
 
         <div class="col-span-12 lg:col-span-6">
           <figure class="aspect-[16/10] rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02] shadow-[0_10px_30px_-10px_rgba(0,0,0,0.45)]">
-            ${pictureHTML('backtesting', '(min-width:1024px) 40rem, 100vw', 'Backtesting panel displaying profile behavior on recent history.')}
+            ${pictureHTML('backtesting', '(min-width:1024px) 40rem, 100vw', 'Backtesting panel showing expected behavior over recent history.')}
           </figure>
-          <figcaption class="mt-2 text-sm text-white/70">Backtesting — Run while editing; compare variants fast; deploy when ready.</figcaption>
+          <figcaption class="mt-2 text-sm text-white/70"><span class="font-semibold text-white">Backtesting</span> — Run while editing; compare variants fast; deploy when ready.</figcaption>
         </div>
       </div>
     </div>
