@@ -28,7 +28,7 @@ export default function PricingPlans() {
                   <span class="mt-0.5 text-emerald-400" aria-hidden="true">✓</span><span>Backtests: 100/d · 7d</span>
                 </li>
                 <li class="feat-no flex items-center gap-2 p-3 rounded-md bg-white/[0.02] border border-white/5 text-white/60">
-                  <span class="mt-0.5 text-white/40" aria-hidden="true">–</span><span>Alerts: —</span>
+                  <span class="mt-0.5 text-white/40" aria-hidden="true">–</span><span>Alerts: None</span>
                 </li>
               </ul>
             </div>
