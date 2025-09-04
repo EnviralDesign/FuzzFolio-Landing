@@ -127,4 +127,10 @@
   .card {
     @apply bg-white/10 backdrop-blur rounded-2xl p-6 shadow;
   }
+  .badge {
+    @apply inline-flex items-center align-middle ml-2 px-2 py-0.5 text-xs font-semibold rounded-full bg-white/10 border border-white/10 text-white/80;
+  }
+  .price-tag {
+    @apply inline-flex items-center px-2 py-0.5 text-xs font-semibold rounded-md bg-white/5 border border-white/10 text-white/70;
+  }
 }
