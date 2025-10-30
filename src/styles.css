@@ -78,6 +78,38 @@
     animation: fade-up 0.6s ease-out both;
   }
 
+  /* Animated conic-gradient border (subtle, no glow) */
+  .gradient-ring { position: relative; }
+  .gradient-ring::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    z-index: 1;
+    padding: 1px; /* ring thickness */
+    background: conic-gradient(
+      from var(--ring-angle, 0deg),
+      rgba(168,85,247,0.6), /* purple-500 */
+      rgba(236,72,153,0.6), /* pink-500 */
+      rgba(99,102,241,0.6), /* indigo-500 */
+      rgba(168,85,247,0.6)
+    );
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude; /* only the border */
+    animation: ring-phase 4s linear infinite;
+    opacity: .5;
+    pointer-events: none;
+  }
+  @keyframes ring-phase { to { --ring-angle: 360deg; } }
+  @property --ring-angle {
+    syntax: "<angle>";
+    inherits: false;
+    initial-value: 0deg;
+  }
+  @media (prefers-reduced-motion: reduce) { .gradient-ring::before { animation: none; } }
+
   /* Heading text gradient now via Tailwind: bg-gradient-to-b ... text-transparent */
 
   /* CTA tokens */
