@@ -1,9 +1,22 @@
 # FuzzFolio Landing
 
-Static landing page for the FuzzFolio SaaS MVP. The page is built with Vite and Tailwind CSS.
-It includes a light/dark theme toggle and responsive sections highlighting the product's features.
+A small, dependency-free holding site for FuzzFolio while the next product iteration is in private development.
 
-## Development
+## Local preview
 
-Install dependencies with `npm install` and start a dev server with `npm run dev`.
-Build the site with `npm run build`.
+From the repository root:
+
+```bash
+python -m http.server 8080
+```
+
+Then open `http://localhost:8080`.
+
+## Docker
+
+```bash
+docker build -t fuzzfolio-landing .
+docker run --rm -p 8080:80 fuzzfolio-landing
+```
+
+The contact form has no server dependency. It opens the visitor's email client with a pre-filled access request addressed to `support@fuzzfolio.com`.
